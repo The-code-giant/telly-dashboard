@@ -13,6 +13,9 @@ const CalendarToolbar = (toolbar) => {
   const goToCurrent = () => {
     toolbar.onNavigate('TODAY');
   };
+  // const changeViewToWeek = () => {
+  //   toolbar.onView('week');
+  // };
 
   const label = () => {
     const date = moment(toolbar.date);
@@ -39,6 +42,13 @@ const CalendarToolbar = (toolbar) => {
           >
             Today
           </button>
+          {/* <button
+            type="button"
+            className="btn btn-primary calendar-today-btn mr-2"
+            onClick={changeViewToWeek}
+          >
+            WEEK
+          </button> */}
           <button
             type="button"
             className="btn calendar-prev-btn mr-1"
