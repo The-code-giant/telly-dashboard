@@ -52,4 +52,13 @@ module.exports = {
   'pages.error-title': 'Ooops... looks like an error occurred!',
   'pages.error-code': 'Error code',
   'pages.go-back-home': 'GO BACK HOME',
-};
+
+  /* 05.Calendar Page */
+  'calendar.title': 'Calendar',
+  'calendar.today': 'Today',
+  'calendar.month': 'Month',
+  'calendar.week': 'Week',
+  'calendar.editEvent:': 'Edit Event',
+  'calendar.availability': 'Availability',
+  'calendar.schedule': 'Schedule',
+}

@@ -1,4 +1,4 @@
-import { adminRoot } from './defaultValues';
+import { adminRoot } from './defaultValues'
 
 const data = [
   {
@@ -17,7 +17,7 @@ const data = [
   {
     id: 'calendar',
     icon: 'iconsminds-calendar-4',
-    label: 'Schedule',
+    label: 'calendar.schedule',
     to: `${adminRoot}`,
     subs: [
       {
@@ -27,7 +27,7 @@ const data = [
       },
       {
         icon: 'simple-icon-calendar',
-        label: 'Availability',
+        label: 'calendar.availability',
         to: `${adminRoot}/calendar`,
       },
     ],
@@ -59,5 +59,5 @@ const data = [
     to: 'https://gogo-react-docs.coloredstrategies.com/',
     newWindow: true,
   },
-];
-export default data;
+]
+export default data

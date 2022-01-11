@@ -1,16 +1,16 @@
-import React from 'react';
-import { Row } from 'reactstrap';
+import React from 'react'
+import { Row } from 'reactstrap'
 // import IntlMessages from 'helpers/IntlMessages';
-import { Colxx, Separator } from 'components/common/CustomBootstrap';
-import Breadcrumb from 'containers/navs/Breadcrumb';
-import CalendarCard from 'containers/dashboards/Calendar';
+import { Colxx, Separator } from 'components/common/CustomBootstrap'
+import Breadcrumb from 'containers/navs/Breadcrumb'
+import CalendarCard from 'containers/dashboards/Calendar'
 
 const Calendar = ({ match }) => {
   return (
     <>
       <Row>
         <Colxx xxs="12">
-          <Breadcrumb heading="Calendar" match={match} />
+          <Breadcrumb heading="menu.calendar" match={match} />
           <Separator className="mb-5" />
         </Colxx>
       </Row>
@@ -23,7 +23,7 @@ const Calendar = ({ match }) => {
         </Colxx>
       </Row>
     </>
-  );
-};
+  )
+}
 
-export default Calendar;
+export default Calendar

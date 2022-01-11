@@ -103,6 +103,15 @@
   color: $foreground-color;
 }
 
+.rbc-event-label {
+    padding: 0.2em 0.5em;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 0.25em;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+}
 .rbc-event {
   font-size: 0.85em;
   border-radius: 25px;
