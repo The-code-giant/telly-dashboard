@@ -16,14 +16,15 @@ const CalendarCard = () => {
     <Card>
       <CardBody>
         <CardTitle>
-          <IntlMessages id="dashboards.calendar" />
+          <IntlMessages id="menu.calendar" />
         </CardTitle>
         <Calendar
           localizer={localizer}
           style={{ minHeight: '500px' }}
           events={data}
+          selectable
           rtl={getDirection().isRtl}
-          views={['month']}
+          views={['month', 'week']}
           components={{
             toolbar: CalendarToolbar,
           }}

@@ -14,7 +14,9 @@ const SecondMenu = React.lazy(() =>
 const BlankPage = React.lazy(() =>
   import(/* webpackChunkName: "viwes-blank-page" */ './blank-page')
 );
-
+const Calendar = React.lazy(() =>
+  import(/* webpackChunkName: "viwes-inbox-page" */ './calendar-page')
+);
 const App = ({ match }) => {
   return (
     <AppLayout>
@@ -29,6 +31,14 @@ const App = ({ match }) => {
             <Route
               path={`${match.url}/second-menu`}
               render={(props) => <SecondMenu {...props} />}
+            />
+            <Route
+              path={`${match.url}/second-menu`}
+              render={(props) => <SecondMenu {...props} />}
+            />
+            <Route
+              path={`${match.url}/calendar`}
+              render={(props) => <Calendar {...props} />}
             />
             {/* <ProtectedRoute
                     path={`${match.url}/second-menu`}

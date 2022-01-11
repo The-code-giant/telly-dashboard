@@ -15,6 +15,24 @@ const data = [
     ],
   },
   {
+    id: 'calendar',
+    icon: 'iconsminds-calendar-4',
+    label: 'Schedule',
+    to: `${adminRoot}`,
+    subs: [
+      {
+        icon: 'simple-icon-calendar',
+        label: 'menu.calendar',
+        to: `${adminRoot}/calendar`,
+      },
+      {
+        icon: 'simple-icon-calendar',
+        label: 'Availability',
+        to: `${adminRoot}/calendar`,
+      },
+    ],
+  },
+  {
     id: 'secondmenu',
     icon: 'iconsminds-three-arrow-fork',
     label: 'menu.second-menu',
