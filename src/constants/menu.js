@@ -27,8 +27,8 @@ const data = [
       },
       {
         icon: 'simple-icon-calendar',
-        label: 'calendar.availability',
-        to: `${adminRoot}/calendar`,
+        label: 'menu.availability',
+        to: `${adminRoot}/availability`,
       },
     ],
   },

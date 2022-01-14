@@ -36,6 +36,7 @@ module.exports = {
   'menu.dashboards': 'Dashboards',
   'menu.gogo': 'Gogo',
   'menu.calendar': 'Calendar',
+  'menu.availability': 'Availability',
   'menu.start': 'Start',
   'menu.second-menu': 'Second Menu',
   'menu.second': 'Second',

@@ -5,7 +5,7 @@ import { Colxx, Separator } from 'components/common/CustomBootstrap'
 import Breadcrumb from 'containers/navs/Breadcrumb'
 import CalendarCard from 'containers/dashboards/Calendar'
 
-const Calendar = ({ match }) => {
+const CalendarPage = ({ match }) => {
   return (
     <>
       <Row>
@@ -16,9 +16,6 @@ const Calendar = ({ match }) => {
       </Row>
       <Row>
         <Colxx xxs="12" className="mb-4">
-          {/* <p>
-            <IntlMessages id="menu.calendar" />
-          </p> */}
           <CalendarCard />
         </Colxx>
       </Row>
@@ -26,4 +23,4 @@ const Calendar = ({ match }) => {
   )
 }
 
-export default Calendar
+export default CalendarPage

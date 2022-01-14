@@ -1,22 +1,25 @@
-import React, { Suspense } from 'react';
-import { Route, withRouter, Switch, Redirect } from 'react-router-dom';
-import { connect } from 'react-redux';
+import React, { Suspense } from 'react'
+import { Route, withRouter, Switch, Redirect } from 'react-router-dom'
+import { connect } from 'react-redux'
 
-import AppLayout from 'layout/AppLayout';
+import AppLayout from 'layout/AppLayout'
 // import { ProtectedRoute, UserRole } from 'helpers/authHelper';
 
 const Gogo = React.lazy(() =>
   import(/* webpackChunkName: "viwes-gogo" */ './gogo')
-);
+)
 const SecondMenu = React.lazy(() =>
   import(/* webpackChunkName: "viwes-second-menu" */ './second-menu')
-);
+)
 const BlankPage = React.lazy(() =>
   import(/* webpackChunkName: "viwes-blank-page" */ './blank-page')
-);
-const Calendar = React.lazy(() =>
+)
+const CalendarPage = React.lazy(() =>
   import(/* webpackChunkName: "viwes-inbox-page" */ './calendar-page')
-);
+)
+const AvailabilityPage = React.lazy(() =>
+  import(/* webpackChunkName: "viwes-inbox-page" */ './availability-page')
+)
 const App = ({ match }) => {
   return (
     <AppLayout>
@@ -38,7 +41,11 @@ const App = ({ match }) => {
             />
             <Route
               path={`${match.url}/calendar`}
-              render={(props) => <Calendar {...props} />}
+              render={(props) => <CalendarPage {...props} />}
+            />
+            <Route
+              path={`${match.url}/availability`}
+              render={(props) => <AvailabilityPage {...props} />}
             />
             {/* <ProtectedRoute
                     path={`${match.url}/second-menu`}
@@ -54,12 +61,12 @@ const App = ({ match }) => {
         </Suspense>
       </div>
     </AppLayout>
-  );
-};
+  )
+}
 
 const mapStateToProps = ({ menu }) => {
-  const { containerClassnames } = menu;
-  return { containerClassnames };
-};
+  const { containerClassnames } = menu
+  return { containerClassnames }
+}
 
-export default withRouter(connect(mapStateToProps, {})(App));
+export default withRouter(connect(mapStateToProps, {})(App))
