@@ -174,5 +174,37 @@ const data = [
     start: 'Tue Dec 24 2019 00:00:00 GMT+0300 (GMT+03:00)',
     end: 'Wed Dec 25 2019 00:00:00 GMT+0300 (GMT+03:00)',
   },
-];
-export default data;
+]
+const events = [
+  {
+    id: 0,
+    title: 'Board meeting',
+    start: new Date(2022, 0, 29, 9, 0, 0),
+    end: new Date(2022, 0, 29, 13, 0, 0),
+    resourceId: 1,
+  },
+  {
+    id: 1,
+    title: 'Meeting 1',
+    start: new Date(2022, 0, 10, 9, 0, 0),
+    end: new Date(2022, 0, 10, 13, 0, 0),
+    resourceId: 2,
+  },
+  // add more events
+  {
+    id: 2,
+    title: 'Meeting 2',
+    start: new Date(2022, 0, 11, 9, 0, 0),
+    end: new Date(2022, 0, 11, 13, 0, 0),
+    resourceId: 3,
+  },
+  {
+    id: 3,
+    title: 'Meeting 3',
+    start: new Date(2022, 0, 12, 9, 0, 0),
+    end: new Date(2022, 0, 12, 13, 0, 0),
+    resourceId: 4,
+  },
+]
+
+export default events

@@ -48,10 +48,18 @@
         ]
       }
     ],
+    "react/self-closing-comp": [
+      1,
+      {
+        "component": true,
+        "html": true
+      }
+    ],
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": 1,
     "react/jsx-props-no-spreading": 0,
     "no-console": "off",
+    "no-unused-vars": 1,
     "react/prop-types": 0,
     "prettier/prettier": [
       "warn"

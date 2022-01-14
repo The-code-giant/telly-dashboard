@@ -1,31 +1,34 @@
 /* eslint-disable jsx-a11y/label-has-for */
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import React from 'react';
-import moment from 'moment';
+import React from 'react'
+import moment from 'moment'
 
 const CalendarToolbar = (toolbar) => {
   const goToBack = () => {
-    toolbar.onNavigate('PREV');
-  };
+    toolbar.onNavigate('PREV')
+  }
   const goToNext = () => {
-    toolbar.onNavigate('NEXT');
-  };
+    toolbar.onNavigate('NEXT')
+  }
   const goToCurrent = () => {
-    toolbar.onNavigate('TODAY');
-  };
-  // const changeViewToWeek = () => {
-  //   toolbar.onView('week');
-  // };
+    toolbar.onNavigate('TODAY')
+  }
+  const changeViewToWeek = () => {
+    toolbar.onView('week')
+  }
+  const changeViewToMonth = () => {
+    toolbar.onView('month')
+  }
 
   const label = () => {
-    const date = moment(toolbar.date);
+    const date = moment(toolbar.date)
     return (
       <span>
         <span>{date.format('MMMM')} </span>
         <span> {date.format('YYYY')}</span>
       </span>
-    );
-  };
+    )
+  }
 
   return (
     <div className="big-calendar-header">
@@ -42,13 +45,20 @@ const CalendarToolbar = (toolbar) => {
           >
             Today
           </button>
-          {/* <button
+          <button
+            type="button"
+            className="btn btn-primary calendar-today-btn mr-2"
+            onClick={changeViewToMonth}
+          >
+            MONTH
+          </button>
+          <button
             type="button"
             className="btn btn-primary calendar-today-btn mr-2"
             onClick={changeViewToWeek}
           >
             WEEK
-          </button> */}
+          </button>
           <button
             type="button"
             className="btn calendar-prev-btn mr-1"
@@ -66,6 +76,6 @@ const CalendarToolbar = (toolbar) => {
         </div>
       </div>
     </div>
-  );
-};
-export default CalendarToolbar;
+  )
+}
+export default CalendarToolbar
