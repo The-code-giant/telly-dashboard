@@ -4,7 +4,7 @@ const data = [
   {
     id: 'gogo',
     icon: 'iconsminds-air-balloon-1',
-    label: 'menu.gogo',
+    label: 'Home',
     to: `${adminRoot}/gogo`,
     subs: [
       {
@@ -32,32 +32,32 @@ const data = [
       },
     ],
   },
-  {
-    id: 'secondmenu',
-    icon: 'iconsminds-three-arrow-fork',
-    label: 'menu.second-menu',
-    to: `${adminRoot}/second-menu`,
-    // roles: [UserRole.Admin, UserRole.Editor],
-    subs: [
-      {
-        icon: 'simple-icon-paper-plane',
-        label: 'menu.second',
-        to: `${adminRoot}/second-menu/second`,
-      },
-    ],
-  },
-  {
-    id: 'blankpage',
-    icon: 'iconsminds-bucket',
-    label: 'menu.blank-page',
-    to: `${adminRoot}/blank-page`,
-  },
-  {
-    id: 'docs',
-    icon: 'iconsminds-library',
-    label: 'menu.docs',
-    to: 'https://gogo-react-docs.coloredstrategies.com/',
-    newWindow: true,
-  },
+  // {
+  //   id: 'secondmenu',
+  //   icon: 'iconsminds-three-arrow-fork',
+  //   label: 'menu.second-menu',
+  //   to: `${adminRoot}/second-menu`,
+  //   // roles: [UserRole.Admin, UserRole.Editor],
+  //   subs: [
+  //     {
+  //       icon: 'simple-icon-paper-plane',
+  //       label: 'menu.second',
+  //       to: `${adminRoot}/second-menu/second`,
+  //     },
+  //   ],
+  // },
+  // {
+  //   id: 'blankpage',
+  //   icon: 'iconsminds-bucket',
+  //   label: 'menu.blank-page',
+  //   to: `${adminRoot}/blank-page`,
+  // },
+  // {
+  //   id: 'docs',
+  //   icon: 'iconsminds-library',
+  //   label: 'menu.docs',
+  //   to: 'https://gogo-react-docs.coloredstrategies.com/',
+  //   newWindow: true,
+  // },
 ]
 export default data

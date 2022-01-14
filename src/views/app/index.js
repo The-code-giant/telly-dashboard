@@ -8,12 +8,12 @@ import AppLayout from 'layout/AppLayout'
 const Gogo = React.lazy(() =>
   import(/* webpackChunkName: "viwes-gogo" */ './gogo')
 )
-const SecondMenu = React.lazy(() =>
-  import(/* webpackChunkName: "viwes-second-menu" */ './second-menu')
-)
-const BlankPage = React.lazy(() =>
-  import(/* webpackChunkName: "viwes-blank-page" */ './blank-page')
-)
+// const SecondMenu = React.lazy(() =>
+//   import(/* webpackChunkName: "viwes-second-menu" */ './second-menu')
+// );
+// const BlankPage = React.lazy(() =>
+//   import(/* webpackChunkName: "viwes-blank-page" */ './blank-page')
+// );
 const CalendarPage = React.lazy(() =>
   import(/* webpackChunkName: "viwes-inbox-page" */ './calendar-page')
 )
@@ -31,14 +31,10 @@ const App = ({ match }) => {
               path={`${match.url}/gogo`}
               render={(props) => <Gogo {...props} />}
             />
-            <Route
+            {/* <Route
               path={`${match.url}/second-menu`}
               render={(props) => <SecondMenu {...props} />}
-            />
-            <Route
-              path={`${match.url}/second-menu`}
-              render={(props) => <SecondMenu {...props} />}
-            />
+            /> */}
             <Route
               path={`${match.url}/calendar`}
               render={(props) => <CalendarPage {...props} />}
@@ -52,10 +48,10 @@ const App = ({ match }) => {
                     component={SecondMenu}
                     roles={[UserRole.Admin]}
             /> */}
-            <Route
+            {/* <Route
               path={`${match.url}/blank-page`}
               render={(props) => <BlankPage {...props} />}
-            />
+            /> */}
             <Redirect to="/error" />
           </Switch>
         </Suspense>
