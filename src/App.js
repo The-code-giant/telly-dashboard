@@ -69,10 +69,7 @@ class App extends React.Component {
                     component={ViewApp}
                     roles={[UserRole.Admin, UserRole.Editor]}
                   />
-                  <Route
-                    path="/user"
-                    render={(props) => <ViewUser {...props} />}
-                  />
+                  <Route path="/" render={(props) => <ViewUser {...props} />} />
                   <Route
                     path="/error"
                     exact
@@ -84,7 +81,7 @@ class App extends React.Component {
                     render={(props) => <ViewUnauthorized {...props} />}
                   />
                   <Route
-                    path="/"
+                    path="/user"
                     exact
                     render={(props) => <ViewHome {...props} />}
                   />
