@@ -1,10 +1,10 @@
 import React from 'react'
-import { Card, CardBody, CardHeader, CardTitle, Row } from 'reactstrap'
+import { Card, CardBody, CardTitle, Row } from 'reactstrap'
 // import IntlMessages from 'helpers/IntlMessages';
 import { Colxx, Separator } from 'components/common/CustomBootstrap'
 import Breadcrumb from 'containers/navs/Breadcrumb'
 import IntlMessages from 'helpers/IntlMessages'
-import Availability from 'components/availability'
+import { CurrentAvailability, EditAvailability } from 'components/availability'
 
 const availabilityData = [
   {
@@ -87,10 +87,8 @@ const AvailabilityPage = ({ match }) => {
               <CardTitle>
                 <IntlMessages id="Current Availability" />
               </CardTitle>
-              <Availability data={availabilityData} />
-              <CardTitle>
-                <IntlMessages id="Edit Availability" />
-              </CardTitle>
+              <CurrentAvailability data={availabilityData} />
+              <EditAvailability data={availabilityData} />
             </CardBody>
           </Card>
         </Colxx>
