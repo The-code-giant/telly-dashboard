@@ -31,9 +31,9 @@ const CalendarCard = () => {
   const [newEvent, setNewEvent] = useState({})
   const [selectedEvent, setSelectedEvent] = useState({})
 
-  useEffect(() => {
-    console.log(modalIsOpen)
-  }, [modalIsOpen])
+  // useEffect(() => {
+  //   console.log(modalIsOpen)
+  // }, [modalIsOpen])
   return (
     <Card>
       <StyledModal

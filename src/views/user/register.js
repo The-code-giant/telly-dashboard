@@ -18,8 +18,8 @@ import { Colxx } from 'components/common/CustomBootstrap'
 import { adminRoot } from 'constants/defaultValues'
 
 const Register = ({ history }) => {
-  const [email] = useState('demo@gogo.com')
-  const [password] = useState('gogo123')
+  const [email] = useState('demo@telly.com')
+  const [password] = useState('telly123')
   const [name] = useState('Sarah Kortney')
 
   const onUserRegister = () => {
