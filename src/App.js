@@ -1,23 +1,29 @@
+import { initializeParse } from '@parse/react'
 import React, { Suspense } from 'react'
+import { IntlProvider } from 'react-intl'
 import { connect } from 'react-redux'
 import {
   BrowserRouter as Router,
+  Redirect,
   Route,
   Switch,
-  Redirect,
 } from 'react-router-dom'
-import { IntlProvider } from 'react-intl'
-import './helpers/Firebase'
-import AppLocale from './lang'
-import ColorSwitcher from './components/common/ColorSwitcher'
 import { NotificationContainer } from './components/common/react-notifications'
-import {
-  isMultiColorActive,
-  adminRoot,
-  UserRole,
-} from './constants/defaultValues'
-import { getDirection } from './helpers/Utils'
+import { adminRoot, UserRole } from './constants/defaultValues'
 import { ProtectedRoute } from './helpers/authHelper'
+import './helpers/Firebase'
+import { getDirection } from './helpers/Utils'
+import AppLocale from './lang'
+
+require('dotenv').config({ path: __dirname + '/.env' }) // eslint-disable-line
+
+console.log('inited parse', process.env.REACT_APP_API_PARSE_SERVER_URL)
+
+initializeParse(
+  process.env.REACT_APP_API_PARSE_SERVER_URL, // custom url
+  process.env.REACT_APP_API_PARSE_APPLICATION_ID, // app id
+  process.env.REACT_APP_API_JAVASCRIPT_KEY // js
+)
 
 const ViewHome = React.lazy(() =>
   import(/* webpackChunkName: "views" */ './views/home')
