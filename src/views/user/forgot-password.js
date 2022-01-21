@@ -25,7 +25,7 @@ const ForgotPassword = ({
   error,
   forgotPasswordAction,
 }) => {
-  const [email] = useState('demo@coloredstrategies.com')
+  const [email] = useState('demo@telly.com')
 
   const onForgotPassword = (values) => {
     if (!loading) {

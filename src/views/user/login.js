@@ -31,8 +31,8 @@ const validateEmail = (value) => {
 }
 
 const Login = ({ history, loading, error, loginUserAction }) => {
-  const [email] = useState('demo@gogo.com')
-  const [password] = useState('gogo123')
+  const [email] = useState('demo@telly.com')
+  const [password] = useState('telly123')
 
   useEffect(() => {
     if (error) {
@@ -55,21 +55,24 @@ const Login = ({ history, loading, error, loginUserAction }) => {
       <Colxx xxs="12" md="10" className="mx-auto my-auto">
         <Card className="auth-card">
           <div className="position-relative image-side ">
-            <p className="text-white h2">MAGIC IS IN THE DETAILS</p>
-            <p className="white mb-0">
-              Please use your credentials to login.
-              <br />
-              If you are not a member, please{' '}
-              <NavLink to="/user/register" className="white">
-                register
-              </NavLink>
-              .
-            </p>
+            <div className="wrapper">
+              <p className="text-white h2">Telly</p>
+              <p className="white mb-0">
+                Please use your credentials to login.
+                <br />
+                If you are not a member, please{' '}
+                <NavLink to="/register" className="white">
+                  register
+                </NavLink>
+                .
+              </p>
+            </div>
           </div>
           <div className="form-side">
             <NavLink to="/" className="white">
               {/* <span className="logo-single" /> */}
             </NavLink>
+            <div className="logo" />
             <CardTitle className="mb-4">
               <IntlMessages id="user.login-title" />
             </CardTitle>
@@ -109,7 +112,7 @@ const Login = ({ history, loading, error, loginUserAction }) => {
                     )}
                   </FormGroup>
                   <div className="d-flex justify-content-between align-items-center">
-                    <NavLink to="/user/forgot-password">
+                    <NavLink to="/forgot-password">
                       <IntlMessages id="user.forgot-password-question" />
                     </NavLink>
                     <Button

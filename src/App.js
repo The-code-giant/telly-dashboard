@@ -17,8 +17,6 @@ import AppLocale from './lang'
 
 require('dotenv').config({ path: __dirname + '/.env' }) // eslint-disable-line
 
-console.log('inited parse', process.env.REACT_APP_API_PARSE_SERVER_URL)
-
 initializeParse(
   process.env.REACT_APP_API_PARSE_SERVER_URL, // custom url
   process.env.REACT_APP_API_PARSE_APPLICATION_ID, // app id

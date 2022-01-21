@@ -5,13 +5,26 @@
 
   .image-side {
     width: 40%;
-    background: url('/assets/img/login/balloon.jpg') no-repeat center top;
+    background: url('/assets/img/login/doctors-2.jpg') no-repeat center top;
     background-size: cover;
     padding: 80px 40px;
-
+    .wrapper {
+      background-color: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(8px);
+      padding: 20px;
+      border-radius: 8px;
+      border: 1px solid white;
+    }
     .h3 {
       line-height: 0.8rem;
     }
+  }
+
+  .logo {
+    width: 50px;
+    height: 50px;
+    background: url('/assets/img/logos/logo-1.png') no-repeat center top;
+    background-size: contain;
   }
 
   .form-side {
