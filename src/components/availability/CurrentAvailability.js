@@ -14,7 +14,7 @@ const days = [
   'Sunday',
 ]
 
-const CurrentAvailability = ({ data }) => {
+const CurrentAvailability = () => {
   const [availability, setAvailability] = useState([])
 
   useEffect(() => {

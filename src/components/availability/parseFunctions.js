@@ -12,7 +12,6 @@ const DAY_MAP = {
 
 export const getAvailability = async (sellerId) => {
   try {
-    console.log('sellerId', sellerId)
     const Sellers = Parse.Object.extend('Sellers')
     const query = new Parse.Query(Sellers)
     query.equalTo('objectId', sellerId)
@@ -32,13 +31,11 @@ export const updateAvailability = async (sellerId, availability) => {
     query.equalTo('objectId', sellerId)
     const results = await query.find()
     if (results.length === 0) {
-      console.log('No results to update')
       return
     }
     results.forEach((res) => {
       res.set('availability', availability)
       res.save()
-      console.log('updated')
     })
   } catch (error) {
     console.log(error)

@@ -5,8 +5,11 @@ import { connect } from 'react-redux'
 import AppLayout from 'layout/AppLayout'
 // import { ProtectedRoute, UserRole } from 'helpers/authHelper';
 
-const Gogo = React.lazy(() =>
-  import(/* webpackChunkName: "viwes-gogo" */ './gogo')
+const Home = React.lazy(() =>
+  import(/* webpackChunkName: "viwes-gogo" */ './home-page')
+)
+const Chat = React.lazy(() =>
+  import(/* webpackChunkName: "viwes-gogo" */ './chat-page')
 )
 // const SecondMenu = React.lazy(() =>
 //   import(/* webpackChunkName: "viwes-second-menu" */ './second-menu')
@@ -26,10 +29,14 @@ const App = ({ match }) => {
       <div className="dashboard-wrapper">
         <Suspense fallback={<div className="loading" />}>
           <Switch>
-            <Redirect exact from={`${match.url}/`} to={`${match.url}/gogo`} />
+            <Redirect exact from={`${match.url}/`} to={`${match.url}/home`} />
             <Route
-              path={`${match.url}/gogo`}
-              render={(props) => <Gogo {...props} />}
+              path={`${match.url}/home`}
+              render={(props) => <Home {...props} />}
+            />
+            <Route
+              path={`${match.url}/chat`}
+              render={(props) => <Chat {...props} />}
             />
             {/* <Route
               path={`${match.url}/second-menu`}

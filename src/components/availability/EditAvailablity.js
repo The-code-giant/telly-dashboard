@@ -17,7 +17,7 @@ const TIME_FRAME_OPTIONS = [
   '8 Weeks',
 ]
 
-const EditAvailability = ({ data }) => {
+const EditAvailability = () => {
   const [formInput, setFormInput] = useState({
     selectedDays: {
       Mon: false,

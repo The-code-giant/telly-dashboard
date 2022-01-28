@@ -2,15 +2,20 @@ import { adminRoot } from './defaultValues'
 
 const data = [
   {
-    id: 'gogo',
+    id: 'Home',
     icon: 'iconsminds-air-balloon-1',
     label: 'Home',
-    to: `${adminRoot}/gogo`,
+    to: `${adminRoot}/home`,
     subs: [
       {
         icon: 'simple-icon-paper-plane',
         label: 'menu.start',
-        to: `${adminRoot}/gogo/start`,
+        to: `${adminRoot}/home`,
+      },
+      {
+        icon: 'iconsminds-mail-inbox',
+        label: 'menu.chat',
+        to: `${adminRoot}/chat`,
       },
     ],
   },
@@ -32,6 +37,7 @@ const data = [
       },
     ],
   },
+
   // {
   //   id: 'secondmenu',
   //   icon: 'iconsminds-three-arrow-fork',
