@@ -6,71 +6,6 @@ import Breadcrumb from 'containers/navs/Breadcrumb'
 import IntlMessages from 'helpers/IntlMessages'
 import { CurrentAvailability, EditAvailability } from 'components/availability'
 
-const availabilityData = [
-  {
-    empty: false,
-    day: 'Monday',
-    hours: [
-      {
-        start: '9:00',
-        end: '12:00',
-      },
-      {
-        start: '16:00',
-        end: '20:00',
-      },
-    ],
-  },
-  {
-    empty: false,
-    day: 'Tuesday',
-    hours: [
-      {
-        start: '9:00',
-        end: '12:00',
-      },
-      {
-        start: '16:00',
-        end: '20:00',
-      },
-    ],
-  },
-  {
-    empty: false,
-    day: 'Wednesday',
-    hours: [
-      {
-        start: '9:00',
-        end: '12:00',
-      },
-      {
-        start: '16:00',
-        end: '20:00',
-      },
-    ],
-  },
-  {
-    empty: true,
-    day: 'Thursday',
-    hours: [],
-  },
-  {
-    empty: true,
-    day: 'Friday',
-    hours: [],
-  },
-  {
-    empty: true,
-    day: 'Saturday',
-    hours: [],
-  },
-  {
-    empty: true,
-    day: 'Sunday',
-    hours: [],
-  },
-]
-
 const AvailabilityPage = ({ match }) => {
   return (
     <>
@@ -87,8 +22,8 @@ const AvailabilityPage = ({ match }) => {
               <CardTitle>
                 <IntlMessages id="Current Availability" />
               </CardTitle>
-              <CurrentAvailability data={availabilityData} />
-              <EditAvailability data={availabilityData} />
+              <CurrentAvailability />
+              <EditAvailability />
             </CardBody>
           </Card>
         </Colxx>

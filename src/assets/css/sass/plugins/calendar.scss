@@ -58,6 +58,13 @@
   }
 }
 
+.available {
+  color: red;
+}
+.unavailable {
+  background-color: #c0c0c0;
+}
+
 .rbc-month-view {
   border: initial;
 }
@@ -104,13 +111,13 @@
 }
 
 .rbc-event-label {
-    padding: 0.2em 0.5em;
-    font-size: 1em;
-    font-weight: bold;
-    border-radius: 0.25em;
-    display: inline-block;
-    text-align: center;
-    width: 100%;
+  padding: 0.2em 0.5em;
+  font-size: 1em;
+  font-weight: bold;
+  border-radius: 0.25em;
+  display: inline-block;
+  text-align: center;
+  width: 100%;
 }
 .rbc-event {
   font-size: 0.85em;
